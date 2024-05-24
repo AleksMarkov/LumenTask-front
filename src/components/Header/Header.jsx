@@ -1,29 +1,23 @@
-import {
-  HeaderContainer,
-  Navigation,
-  StyledLink,
-  IconWrapper,
-} from './Header.styled';
-import sprite from 'assets/sprite.svg';
+import * as Styled from './Header.styled';
+import ThemeSelection from './ThemeSelection/ThemeSelection';
+import Icon from 'components/Icon/Icon';
 
-export const Header = () => {
+
+const Header = ({ openSidebar }) => {
+
+  
 
   return (
-    <HeaderContainer>
-      <Navigation>
-        <StyledLink to="/first">
-          <IconWrapper>
-            <use href={`${sprite}#icon-logo`} />
-          </IconWrapper>
-          First
-        </StyledLink>
-        <StyledLink to="/second">
-          <IconWrapper>
-            <use href={`${sprite}#icon-logo`} />
-          </IconWrapper>
-          Second
-        </StyledLink>
-      </Navigation>
-    </HeaderContainer>
+    <Styled.Header>
+      <Styled.MobMenuBtn type="button" onClick={openSidebar} >
+        <Icon name="icon-menu"></Icon>
+      </Styled.MobMenuBtn>
+
+      <Styled.UserInfoDiv>
+        <ThemeSelection />
+      </Styled.UserInfoDiv>
+    </Styled.Header>
   );
 };
+
+export default Header;
