@@ -12,5 +12,5 @@ export default defineConfig({
           assets: '/src/assets'
         },
       },
-      base: '/AleksMarkov/LumenTask-front',
+      base: '/LumenTask-front/',
     });
