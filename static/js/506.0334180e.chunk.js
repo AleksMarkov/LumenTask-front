@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkLumenTask_front=self.webpackChunkLumenTask_front||[]).push([[506],{17235:(e,t,s)=>{s.d(t,{A:()=>a});s(65043);const a=s.p+"static/media/sprite.0e75cd2a31952a5a46b2cf1773b23a0f.svg"},64506:(e,t,s)=>{s.d(t,{A:()=>n});var a=s(17235),c=s(70579);const n=e=>{let{width:t,height:s,fillColor:n,strokeColor:r,name:o}=e;return(0,c.jsx)("svg",{width:t,height:s,fill:n,stroke:r,children:(0,c.jsx)("use",{href:"".concat(a.A,"#").concat(o)})})}}}]);
+//# sourceMappingURL=506.0334180e.chunk.js.map
