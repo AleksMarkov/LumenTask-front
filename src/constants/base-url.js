@@ -1,1 +1,1 @@
-export const BASE_API_URL = "https://code-jedi-server.onrender.com";
+export const BASE_API_URL = "https://lumentask-server.onrender.com";
