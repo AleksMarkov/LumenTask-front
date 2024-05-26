@@ -51,7 +51,7 @@ const BoardModal = ({closeModal, menu, closeMenu }) => {
       dispatch(createBoardThunk(data)).then(action => {
         if (action.type === 'boards/createBoard/fulfilled') {
           navigate(action.payload._id);
-          toast('Board was created successfully ✅', TOASTER);
+          toast('Board created successfully ✅', TOASTER);
         }
       });
  

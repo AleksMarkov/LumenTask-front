@@ -38,24 +38,6 @@ export const BACKGROUND_LIST = [
 ];
 
 
-// export const BACKDROP_TRANSITION = {
-//   initial: { opacity: 0, transition: { type: 'spring' } },
-//   isOpen: { opacity: 1 },
-//   exit: { opacity: 0 },
-// };
-
-// export const MODAL_TRANSITION = {
-//   initial: {
-//     y: '-100vh',
-//     transition: { type: 'spring' },
-//   },
-//   isOpen: { y: '0' },
-//   exit: {
-//     top: '100vh',
-//     transition: { duration: 5 },
-//   },
-// };
-
 export const TOASTER = {
   style: {
     border: '2px solid #bedbb0',
@@ -64,17 +46,5 @@ export const TOASTER = {
     textAlign: 'center',
   },
   position: 'top-center',
-  duration: 2000,
+  duration: 1000,
 };
-
-// export const PROGRESS_BAR_COLORS = [
-//   '#dddddd9b',
-//   '#ff1900',
-//   '#f6b44d',
-//   '#99dab2',
-//   '#008d52',
-// ];
-
-// export const DEFAULT_BACKGROUND_ID = '65e476ee9e0727c033dddb93';
-
-// export const MAX_DESCR_LENGTH = 80;

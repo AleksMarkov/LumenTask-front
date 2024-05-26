@@ -33,13 +33,13 @@ const BoardModalEdit = ({ closeModal,currentBoard}) => {
     const data = {
       title: title.value,
       icon: iconId.value,
-      background: background.value === '' ? 'default' : background.value,
+      background: background.value,
     };
 
     dispatch(updateBoardThunk({ boardId: currentBoard._id, newData: data }))
     .then(action => {
       if (action.type === 'boards/updateBoard/fulfilled') {
-        toast('Board was updated successfully ✅', TOASTER);
+        toast('Board updated successfully ✅', TOASTER);
       } else {
         toast(action.payload, TOASTER);
       }
