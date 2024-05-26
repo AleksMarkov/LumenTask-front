@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/LumenTask-front/static/css/main.26803190.css",
-    "main.js": "/LumenTask-front/static/js/main.bb487a75.js",
+    "main.js": "/LumenTask-front/static/js/main.50665adb.js",
     "static/js/665.37dfa0ef.chunk.js": "/LumenTask-front/static/js/665.37dfa0ef.chunk.js",
     "static/js/688.0946a06d.chunk.js": "/LumenTask-front/static/js/688.0946a06d.chunk.js",
-    "static/js/318.22197db8.chunk.js": "/LumenTask-front/static/js/318.22197db8.chunk.js",
-    "static/js/249.e1eda257.chunk.js": "/LumenTask-front/static/js/249.e1eda257.chunk.js",
+    "static/js/205.ba5d658e.chunk.js": "/LumenTask-front/static/js/205.ba5d658e.chunk.js",
+    "static/js/249.195276ea.chunk.js": "/LumenTask-front/static/js/249.195276ea.chunk.js",
     "static/js/657.c17b3e59.chunk.js": "/LumenTask-front/static/js/657.c17b3e59.chunk.js",
     "static/js/525.f0466194.chunk.js": "/LumenTask-front/static/js/525.f0466194.chunk.js",
     "static/css/128.d335e4b2.chunk.css": "/LumenTask-front/static/css/128.d335e4b2.chunk.css",
@@ -123,11 +123,11 @@
     "static/media/icons-sprite.svg": "/LumenTask-front/static/media/icons-sprite.f7bad1557d5f1ff811b95faf64f78ba8.svg",
     "index.html": "/LumenTask-front/index.html",
     "main.26803190.css.map": "/LumenTask-front/static/css/main.26803190.css.map",
-    "main.bb487a75.js.map": "/LumenTask-front/static/js/main.bb487a75.js.map",
+    "main.50665adb.js.map": "/LumenTask-front/static/js/main.50665adb.js.map",
     "665.37dfa0ef.chunk.js.map": "/LumenTask-front/static/js/665.37dfa0ef.chunk.js.map",
     "688.0946a06d.chunk.js.map": "/LumenTask-front/static/js/688.0946a06d.chunk.js.map",
-    "318.22197db8.chunk.js.map": "/LumenTask-front/static/js/318.22197db8.chunk.js.map",
-    "249.e1eda257.chunk.js.map": "/LumenTask-front/static/js/249.e1eda257.chunk.js.map",
+    "205.ba5d658e.chunk.js.map": "/LumenTask-front/static/js/205.ba5d658e.chunk.js.map",
+    "249.195276ea.chunk.js.map": "/LumenTask-front/static/js/249.195276ea.chunk.js.map",
     "657.c17b3e59.chunk.js.map": "/LumenTask-front/static/js/657.c17b3e59.chunk.js.map",
     "525.f0466194.chunk.js.map": "/LumenTask-front/static/js/525.f0466194.chunk.js.map",
     "128.d335e4b2.chunk.css.map": "/LumenTask-front/static/css/128.d335e4b2.chunk.css.map",
@@ -136,6 +136,6 @@
   },
   "entrypoints": [
     "static/css/main.26803190.css",
-    "static/js/main.bb487a75.js"
+    "static/js/main.50665adb.js"
   ]
 }
