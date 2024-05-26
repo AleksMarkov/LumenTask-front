@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/LumenTask-front/static/css/main.26803190.css",
-    "main.js": "/LumenTask-front/static/js/main.b7fbc79b.js",
-    "static/js/665.37dfa0ef.chunk.js": "/LumenTask-front/static/js/665.37dfa0ef.chunk.js",
-    "static/js/688.0946a06d.chunk.js": "/LumenTask-front/static/js/688.0946a06d.chunk.js",
-    "static/js/205.93d7421a.chunk.js": "/LumenTask-front/static/js/205.93d7421a.chunk.js",
-    "static/js/249.25dc76c9.chunk.js": "/LumenTask-front/static/js/249.25dc76c9.chunk.js",
-    "static/js/657.c17b3e59.chunk.js": "/LumenTask-front/static/js/657.c17b3e59.chunk.js",
-    "static/js/525.f0466194.chunk.js": "/LumenTask-front/static/js/525.f0466194.chunk.js",
+    "main.js": "/LumenTask-front/static/js/main.c4bae517.js",
+    "static/js/665.0635ffac.chunk.js": "/LumenTask-front/static/js/665.0635ffac.chunk.js",
+    "static/js/688.6fa94c29.chunk.js": "/LumenTask-front/static/js/688.6fa94c29.chunk.js",
+    "static/js/205.cd897c4c.chunk.js": "/LumenTask-front/static/js/205.cd897c4c.chunk.js",
+    "static/js/249.6c2ebf5e.chunk.js": "/LumenTask-front/static/js/249.6c2ebf5e.chunk.js",
+    "static/js/657.7af63ec5.chunk.js": "/LumenTask-front/static/js/657.7af63ec5.chunk.js",
+    "static/js/525.1b244488.chunk.js": "/LumenTask-front/static/js/525.1b244488.chunk.js",
     "static/css/128.d335e4b2.chunk.css": "/LumenTask-front/static/css/128.d335e4b2.chunk.css",
-    "static/js/128.f2445c1d.chunk.js": "/LumenTask-front/static/js/128.f2445c1d.chunk.js",
+    "static/js/128.5886a8c0.chunk.js": "/LumenTask-front/static/js/128.5886a8c0.chunk.js",
     "static/js/506.0334180e.chunk.js": "/LumenTask-front/static/js/506.0334180e.chunk.js",
     "static/media/tree-desk-2x.jpg": "/LumenTask-front/static/media/tree-desk-2x.e76fd5e64cbd4f6e71d2.jpg",
     "static/media/tree-tab-2x.jpg": "/LumenTask-front/static/media/tree-tab-2x.7f31f24c53e07cf9bff5.jpg",
@@ -123,19 +123,19 @@
     "static/media/icons-sprite.svg": "/LumenTask-front/static/media/icons-sprite.f7bad1557d5f1ff811b95faf64f78ba8.svg",
     "index.html": "/LumenTask-front/index.html",
     "main.26803190.css.map": "/LumenTask-front/static/css/main.26803190.css.map",
-    "main.b7fbc79b.js.map": "/LumenTask-front/static/js/main.b7fbc79b.js.map",
-    "665.37dfa0ef.chunk.js.map": "/LumenTask-front/static/js/665.37dfa0ef.chunk.js.map",
-    "688.0946a06d.chunk.js.map": "/LumenTask-front/static/js/688.0946a06d.chunk.js.map",
-    "205.93d7421a.chunk.js.map": "/LumenTask-front/static/js/205.93d7421a.chunk.js.map",
-    "249.25dc76c9.chunk.js.map": "/LumenTask-front/static/js/249.25dc76c9.chunk.js.map",
-    "657.c17b3e59.chunk.js.map": "/LumenTask-front/static/js/657.c17b3e59.chunk.js.map",
-    "525.f0466194.chunk.js.map": "/LumenTask-front/static/js/525.f0466194.chunk.js.map",
+    "main.c4bae517.js.map": "/LumenTask-front/static/js/main.c4bae517.js.map",
+    "665.0635ffac.chunk.js.map": "/LumenTask-front/static/js/665.0635ffac.chunk.js.map",
+    "688.6fa94c29.chunk.js.map": "/LumenTask-front/static/js/688.6fa94c29.chunk.js.map",
+    "205.cd897c4c.chunk.js.map": "/LumenTask-front/static/js/205.cd897c4c.chunk.js.map",
+    "249.6c2ebf5e.chunk.js.map": "/LumenTask-front/static/js/249.6c2ebf5e.chunk.js.map",
+    "657.7af63ec5.chunk.js.map": "/LumenTask-front/static/js/657.7af63ec5.chunk.js.map",
+    "525.1b244488.chunk.js.map": "/LumenTask-front/static/js/525.1b244488.chunk.js.map",
     "128.d335e4b2.chunk.css.map": "/LumenTask-front/static/css/128.d335e4b2.chunk.css.map",
-    "128.f2445c1d.chunk.js.map": "/LumenTask-front/static/js/128.f2445c1d.chunk.js.map",
+    "128.5886a8c0.chunk.js.map": "/LumenTask-front/static/js/128.5886a8c0.chunk.js.map",
     "506.0334180e.chunk.js.map": "/LumenTask-front/static/js/506.0334180e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.26803190.css",
-    "static/js/main.b7fbc79b.js"
+    "static/js/main.c4bae517.js"
   ]
 }
