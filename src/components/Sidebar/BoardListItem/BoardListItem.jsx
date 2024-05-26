@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { selectCurrentBoard } from '../../../redux/boards/boards-selectors.js';
 import {
   BoardItem,
   BoardItemTitleBlock,
@@ -17,6 +19,15 @@ const BoardListItem = ({ board, activeBoardId, onDelete }) => {
   const [isHovered, setIsHovered] = useState(false);
   const isActive = activeBoardId === board._id;
   const [isModalShown, setIsModalShown] = useState(false);
+  const currentBoard = useSelector(selectCurrentBoard);
+  const [localBoard, setLocalBoard] =   useState(board);
+
+  useEffect(() => {
+    if (currentBoard && currentBoard._id === board._id) {
+      setLocalBoard(currentBoard);
+    }
+  }, [currentBoard, board._id]);
+
 
   return (
     <>
@@ -28,11 +39,11 @@ const BoardListItem = ({ board, activeBoardId, onDelete }) => {
         <BoardItemTitleBlock>
           <BoardIcon isHovered={isHovered || isActive}>
             <svg>
-              <use href={`${sprite}#${board.icon}`}></use>
+              <use href={`${sprite}#${localBoard.icon}`}></use>
             </svg>
           </BoardIcon>
           <BoardTitle isHovered={isHovered || isActive}>
-            {board.title}
+            {localBoard.title}
           </BoardTitle>
         </BoardItemTitleBlock>
 
@@ -73,8 +84,6 @@ const BoardListItem = ({ board, activeBoardId, onDelete }) => {
          {isModalShown && (
         <BoardModalEdit
           closeModal={() => setIsModalShown(false)}
-          //  menu={menu}
-        
           currentBoard={board}
         />
       )}

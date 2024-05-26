@@ -64,8 +64,8 @@ const HomePage = () => {
       <Sidebar showSidebar={showSidebar} />
       <MainContainer>
         <Header openSidebar={openSidebar} />
-          {boards.length > 0 && !currentBoard.title && (
-            <Navigate to={`/home/${boards[0].title}`} />
+          {boards.length > 0 && !currentBoard._id && (
+            <Navigate to={`/home/${boards[0]._id}`} />
           )}
           {boards.length > 0 && <Outlet />}
           {!boards.length && <HomePageText />}

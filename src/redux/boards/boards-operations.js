@@ -44,10 +44,9 @@ export const updateBoardThunk = createAsyncThunk(
   async ({ boardId, newData }, { rejectWithValue }) => {
     try {
       const data = await boardAPI.updateBoard(boardId, newData);
-
       return data;
     } catch (error) {
-      return rejectWithValue(error.message);
+      return rejectWithValue(error.response ? error.response.data.message : error.message);
     }
   }
 );

@@ -1,22 +1,27 @@
-import { BACKGROUND_LIST } from '../../../assets/constants/backgroundList';
-import air from './small-back/air.png';
-import ballons from './small-back/ballons.png';
-import canyon from './small-back/canyon.png';
-import abstract from './small-back/abstract.png';
-import clouds from './small-back/clouds.png';
-import magnolia from './small-back/magnolia.png';
-import milkyway from './small-back/milkyway.png';
-import moon from './small-back/moon.png';
-import night from './small-back/night.png';
-import palm from './small-back/palm.png';
-import rocks from './small-back/rocks.png';
-import sea from './small-back/sea.png';
-import stars from './small-back/stars.png';
-import tree from './small-back/tree.png';
-import yacht from './small-back/yacht.png';
+import { BACKGROUND_LIST } from '../../../constants/index.js';
+import defaultdark from './small-back/defaultdark.jpg';
+import defaultlight from './small-back/defaultlight.jpg';
+import defaultviolet from './small-back/defaultviolet.jpg';
+import air from './small-back/air.jpg';
+import ballons from './small-back/ballons.jpg';
+import canyon from './small-back/canyon.jpg';
+import abstract from './small-back/abstract.jpg';
+import clouds from './small-back/clouds.jpg';
+import magnolia from './small-back/magnolia.jpg';
+import milkyway from './small-back/milkyway.jpg';
+import moon from './small-back/moon.jpg';
+import night from './small-back/night.jpg';
+import palm from './small-back/palm.jpg';
+import rocks from './small-back/rocks.jpg';
+import sea from './small-back/sea.jpg';
+import stars from './small-back/stars.jpg';
+import tree from './small-back/tree.jpg';
+import yacht from './small-back/yacht.jpg';
 
 export const backgroundMap = () => {
+
   const images = [
+    '',
     air,
     ballons,
     canyon,
@@ -40,6 +45,23 @@ export const backgroundMap = () => {
     src: image,
     alt: `${index}`,
   }));
+
+  const theme = localStorage.getItem('currentTheme') || 'dark'
+
+  switch (theme) {
+    case 'dark':
+      icons[0].src = defaultdark;
+      break;
+    case 'light':
+      icons[0].src = defaultlight;
+      break;
+    case 'violet':
+      icons[0].src = defaultviolet;
+      break;
+    default:
+      icons[0].src = defaultdark; 
+      break;
+  }
 
   return icons;
 };

@@ -43,7 +43,9 @@ const boardSlice = createSlice({
                 state.isLoading = false;
                 state.error = null;
             })
-            .addCase(updateBoardThunk.rejected, rejected)
+            .addCase(updateBoardThunk.rejected,(state, action) => {    
+            state.error = action.payload;
+            })
             .addCase(deleteBoardThunk.pending, pending)
             .addCase(deleteBoardThunk.fulfilled, (state = initialState, _)=> {
                 state.boards = state.boards.filter(({ _id }) => _id !== state.currentBoard._id);

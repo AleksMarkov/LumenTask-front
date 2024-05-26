@@ -37,7 +37,7 @@ export const BacksList = ({ backgroundId }) => {
                 type="radio"
                 name="background"
                 value={item.name}
-         
+                defaultChecked={selectedBackId === item.name}
                 onChange={() => handleBackChange(item.name)}
               />
               <BackImage

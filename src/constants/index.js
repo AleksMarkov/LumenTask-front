@@ -1,4 +1,4 @@
-export const CLOSE_KEY_CODE = 'Escape';
+// export const CLOSE_KEY_CODE = 'Escape';
 
 export const PRIORITY_LIST = [
   { priority: 'low', color: '#8FA1D0' },
@@ -18,23 +18,43 @@ export const ICONS_ARRAY = [
   { id: 7, name: 'icon-board-hexagon-8', label: 'hexagon' },
 ];
 
-export const BACKDROP_TRANSITION = {
-  initial: { opacity: 0, transition: { type: 'spring' } },
-  isOpen: { opacity: 1 },
-  exit: { opacity: 0 },
-};
+export const BACKGROUND_LIST = [
+  'default',
+  'air',
+  'ballons',
+  'canyon',
+  'abstract',
+  'clouds',
+  'magnolia',
+  'milkyway',
+  'moon',
+  'night',
+  'palm',
+  'rocks',
+  'sea',
+  'stars',
+  'tree',
+  'yacht',
+];
 
-export const MODAL_TRANSITION = {
-  initial: {
-    y: '-100vh',
-    transition: { type: 'spring' },
-  },
-  isOpen: { y: '0' },
-  exit: {
-    top: '100vh',
-    transition: { duration: 5 },
-  },
-};
+
+// export const BACKDROP_TRANSITION = {
+//   initial: { opacity: 0, transition: { type: 'spring' } },
+//   isOpen: { opacity: 1 },
+//   exit: { opacity: 0 },
+// };
+
+// export const MODAL_TRANSITION = {
+//   initial: {
+//     y: '-100vh',
+//     transition: { type: 'spring' },
+//   },
+//   isOpen: { y: '0' },
+//   exit: {
+//     top: '100vh',
+//     transition: { duration: 5 },
+//   },
+// };
 
 export const TOASTER = {
   style: {
@@ -47,14 +67,14 @@ export const TOASTER = {
   duration: 2000,
 };
 
-export const PROGRESS_BAR_COLORS = [
-  '#dddddd9b',
-  '#ff1900',
-  '#f6b44d',
-  '#99dab2',
-  '#008d52',
-];
+// export const PROGRESS_BAR_COLORS = [
+//   '#dddddd9b',
+//   '#ff1900',
+//   '#f6b44d',
+//   '#99dab2',
+//   '#008d52',
+// ];
 
-export const DEFAULT_BACKGROUND_ID = '65e476ee9e0727c033dddb93';
+// export const DEFAULT_BACKGROUND_ID = '65e476ee9e0727c033dddb93';
 
-export const MAX_DESCR_LENGTH = 80;
+// export const MAX_DESCR_LENGTH = 80;

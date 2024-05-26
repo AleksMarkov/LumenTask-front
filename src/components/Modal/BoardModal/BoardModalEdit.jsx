@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { updateBoardThunk,
-  getAllBoardsThunk } from '../../../redux/boards/boards-operations';
+import { toast } from 'react-toastify';
+import { TOASTER } from '../../../constants/index';
+import { updateBoardThunk } from '../../../redux/boards/boards-operations';
 import {  selectCurrentBoard } from '../../../redux/boards/boards-selectors';
-
 import { validateInputMaxLength } from '../../../helpers/validateInputMaxLength.js';
 import Modal from '../Modal/Modal';
 import { IconsList } from './IconsList';
@@ -21,7 +20,7 @@ import {
 } from './BoardModal.styled';
 
 
-const BoardModalEdit = ({ closeModal, menu, closeMenu, currentBoard}) => {
+const BoardModalEdit = ({ closeModal,currentBoard}) => {
   const [errorMsgShown, setErrorMsgShown] = useState(false);
   const [errorClassName, setErrorClassName] = useState('');
 
@@ -34,15 +33,18 @@ const BoardModalEdit = ({ closeModal, menu, closeMenu, currentBoard}) => {
     const data = {
       title: title.value,
       icon: iconId.value,
-      background: background.value,
+      background: background.value === '' ? 'default' : background.value,
     };
-   
+
     dispatch(updateBoardThunk({ boardId: currentBoard._id, newData: data }))
-    dispatch(getAllBoardsThunk());
+    .then(action => {
+      if (action.type === 'boards/updateBoard/fulfilled') {
+        toast('Board was updated successfully ✅', TOASTER);
+      } else {
+        toast(action.payload, TOASTER);
+      }
+    });
     closeModal();
-    if (menu) closeMenu();
-  
-    return;
   };
 
 

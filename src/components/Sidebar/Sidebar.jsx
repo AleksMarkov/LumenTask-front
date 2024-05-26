@@ -22,7 +22,6 @@ import {
 import sprite from '../../assets/svg/sprite.svg';
 const Sidebar = ({ showSidebar }) => {
   const [isAddBoardModalShown, setIsAddBoardModalShown] = useState(false);
-  const [isEditBoardModalShown, setIsEditBoardModalShown] = useState(false);
   const dispatch = useDispatch();
   const handleLogOut = () => {
     dispatch(logOut());
@@ -72,18 +71,10 @@ const Sidebar = ({ showSidebar }) => {
       </LogoutBlock>
       {isAddBoardModalShown && (
         <BoardModal
-          variant="add"
           closeModal={() => setIsAddBoardModalShown(false)}
           closeMenu={showSidebar}
         />
       )}
-      {isEditBoardModalShown && (
-        <BoardModal
-          variant="edit"
-          closeModal={() => setIsEditBoardModalShown(false)}
-        />
-      )}
-
     </SidebarWrapper>
   );
 };

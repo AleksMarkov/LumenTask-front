@@ -20,7 +20,6 @@ const BoardList = () => {
 
   const activeBoardIndex = boards.findIndex(board => board._id === activeBoardId);
   const nextBoardId = activeBoardIndex > 0 ? boards[activeBoardIndex - 1]?._id : boards[activeBoardIndex + 1]?._id;
-  const nextBoardName = boards.find(board => board?._id === nextBoardId)?.title;
 
   useEffect(() => {
     dispatch(getAllBoardsThunk());
@@ -40,8 +39,8 @@ const BoardList = () => {
       if (action.type !== 'boards/deleteBoard/fulfilled') {
         return;
       }
-      navigate(nextBoardId ? `/home/${nextBoardName}` : '/');
       dispatch(getBoardByIdThunk(nextBoardId));
+      navigate(nextBoardId ? `/home/${nextBoardId}` : '/');
     });
   };
 
@@ -51,7 +50,7 @@ const BoardList = () => {
       onClick={() => handleClick(_id)}
       className={activeBoardId === _id ? 'activeBoard' : ''}
     >
-      <NavLink to={`/home/${title}`}>
+      <NavLink to={`/home/${_id}`}>   
         <BoardListItem
           board={{ _id, title, icon }}
           activeBoardId={activeBoardId}

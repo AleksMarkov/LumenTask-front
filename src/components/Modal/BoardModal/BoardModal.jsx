@@ -1,11 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
-import {
-  createBoardThunk,
-  updateBoardThunk,
-} from '../../../redux/boards/boards-operations';
-import { selectOneBoard } from '../../../redux/boards/boards-selectors';
+import {createBoardThunk} from '../../../redux/boards/boards-operations';
+
 import { TOASTER } from '../../../constants/index';
 import { validateInputMaxLength } from '../../../helpers/validateInputMaxLength.js';
 import Modal from '../Modal/Modal';
@@ -23,15 +20,13 @@ import {
 } from './BoardModal.styled';
 import { useNavigate } from 'react-router-dom';
 
-const BoardModal = ({ variant, closeModal, menu, closeMenu }) => {
+const BoardModal = ({closeModal, menu, closeMenu }) => {
   const [errorMsgShown, setErrorMsgShown] = useState(false);
   const [errorClassName, setErrorClassName] = useState('');
-
   const titleRef = useRef(null);
   const dispatch = useDispatch();
-
   const navigate = useNavigate();
-  const oneBoard = useSelector(selectOneBoard);
+
 
   useEffect(() => {
     titleRef.current.focus();
@@ -49,20 +44,17 @@ const BoardModal = ({ variant, closeModal, menu, closeMenu }) => {
     const data = {
       title: title.value,
       icon: iconId.value,
-      background: background.value === '' ? 'default' : background.value,
+      background:  background.value,
     };
 
-    if (variant === 'add') {
+   
       dispatch(createBoardThunk(data)).then(action => {
         if (action.type === 'boards/createBoard/fulfilled') {
-          navigate(action.payload.title);
+          navigate(action.payload._id);
           toast('Board was created successfully ✅', TOASTER);
         }
       });
-    } else {
-      dispatch(updateBoardThunk({ boardId: oneBoard._id, dataUpdate: data }));
-      toast('Board was edited successfully ✅', TOASTER);
-    }
+ 
 
     closeModal();
     if (menu) closeMenu();
@@ -72,7 +64,7 @@ const BoardModal = ({ variant, closeModal, menu, closeMenu }) => {
   return (
     <Modal width={350} onClose={closeModal}>
       <Form onSubmit={handleSubmit}>
-        <Title>{variant === 'add' ? 'New board' : 'Edit board'}</Title>
+        <Title>New board</Title>
         <Label>
           <Input
             className={errorClassName}
@@ -80,7 +72,7 @@ const BoardModal = ({ variant, closeModal, menu, closeMenu }) => {
             type="text"
             placeholder={'Title'}
             name="title"
-            defaultValue={variant === 'add' ? '' : oneBoard.title}
+            defaultValue={''}
             autoComplete="off"
             maxLength={20}
             onChange={e =>
@@ -90,14 +82,11 @@ const BoardModal = ({ variant, closeModal, menu, closeMenu }) => {
           {errorMsgShown && <p>{'Maximum title length is 20 symbols'}</p>}
         </Label>
         <Text>{'Icons'}</Text>
-        <IconsList iconId={variant === 'add' ? 'project' : oneBoard.title} />
+        <IconsList iconId={'project'} />
         <Text>{'Background'}</Text>
-
         <BacksList
-          backgroundId={variant === 'add' ? 'default' : oneBoard.background}
+          backgroundId={'default'}
         />
-      
-
         <Button type="submit">
           <Span>
             <Plus
@@ -106,7 +95,7 @@ const BoardModal = ({ variant, closeModal, menu, closeMenu }) => {
               strokeColor={'var(--btn-icon-color)'}
             />
           </Span>
-          {variant === 'add' ? 'Create' : 'Edit'}
+          Create
         </Button>
       </Form>
     </Modal>
