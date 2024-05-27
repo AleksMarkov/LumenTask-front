@@ -14,14 +14,14 @@ import { handleBackgroundChange } from './handleBackgorundChange.js';
 const ScreensPage = () => {
   const boards = useSelector(selectBoards);
   const board = useSelector(selectCurrentBoard);
-  const { boardName } = useParams();
+  const { boardId } = useParams();
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     try {
-      if (boardName) {
-        const board = boards.find(board => board.title === boardName);
+      if (boardId) {
+        const board = boards.find(board => board._id === boardId);
         const boardId = board._id;
         dispatch(getBoardByIdThunk(boardId));
       } else {
@@ -30,7 +30,7 @@ const ScreensPage = () => {
       
     } catch (error) {
     }
-  }, [dispatch, boardName, boards]);
+  }, [dispatch, boardId, boards]);
 
   const backgroundImage = handleBackgroundChange(board.background);
 

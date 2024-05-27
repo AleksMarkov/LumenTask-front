@@ -16,7 +16,13 @@ export const ButtonSend = styled.button`
   }
   @media (max-width: 768px) {
     min-width: 335px;
-    width: 100%;
+  }
+  @media (max-width: 400px) {
+    min-width: 287px;
+  }
+
+  @media (max-width: 350px) {
+    min-width: 255px;
   }
 `;
 

@@ -2,45 +2,32 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const SidebarWrapper = styled.aside`
-  // position: absolute;
-  position: ${({ showSidebar }) => (showSidebar ? 'absolute' : 'static')};
+  position: ${({ showSidebar }) => (showSidebar ? 'static' : 'absolute')};
   display: ${({ showSidebar }) => (showSidebar ? 'flex' : 'none')};
-
-  // visibility: ${({ showSidebar }) => (showSidebar ? 'visible' : 'hidden')};
   top: 0;
   left: 0;
-  // display: flex;
   flex-direction: column;
-  width: 225px;
+  width: 260px;
   max-width: 260px;
   height: 100vh;
   background: var(--accent-bg-color);
   transform: translateX(0px);
   transition: all var(--transition);
-
-  z-index: ${({ showSidebar }) => (showSidebar ? 200 : 'auto')};
-  // z-index: 200;
-
-  &.showSidebar {
-    transform: translateX(0);
   }
 
-  @media screen and (min-width: 768px) {
-    width: 260px;
-  }
+  @media screen and (max-width: 767px) {
+    width: 225px;
+   }
+
   @media screen and (min-width: 1440px) {
-    transform: translateX(0);
     position: static;
-    z-index: auto;
     display: flex;
-    width: 260px;
   }
 `;
 
 export const SidebarHeader = styled.div`
   padding: 14px 14px 0;
-
-    color: color: var(--icon-color);
+  color: color: var(--icon-color);
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -191,8 +178,6 @@ export const LogoutLink = styled(Link)`
   font-size: 14px;
   color: var(--primary-text-color);
   transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  
 
   &:hover, 
   &:focus .p {var(--accent-icon-hover-color);

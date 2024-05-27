@@ -6,8 +6,9 @@ export const Header = styled.header`
   justify-content: space-between;
   height: 60px;
   padding: 18px 20px;
-  // width: 100vw;
   background-color: var(--additional-bg-color);
+  position: relative;
+  transition: margin-left 0.3s ease;
 
   @media screen and (min-width: 768px) {
     height: 68px;
@@ -18,8 +19,10 @@ export const Header = styled.header`
     justify-content: flex-end;
     padding-left: 24px;
     padding-right: 24px;
+    margin-left: 0px;
   }
 `;
+
 export const MobMenuBtn = styled.button`
   svg {
     width: 24px;
@@ -30,6 +33,7 @@ export const MobMenuBtn = styled.button`
       height: 32px;
     }
   }
+
   @media screen and (min-width: 1440px) {
     display: none;
   }
@@ -38,4 +42,5 @@ export const MobMenuBtn = styled.button`
 export const UserInfoDiv = styled.div`
   display: flex;
   align-items: center;
+  margin-left: auto;
 `;

@@ -30,7 +30,7 @@ const Sidebar = ({ showSidebar }) => {
   return (
     <SidebarWrapper showSidebar={showSidebar}>
       <SidebarHeader>
-        <LogoBlock to="/home">
+        <LogoBlock>
           <div>
             <svg>
               <use href={`${sprite}#logo`}></use>
@@ -80,3 +80,4 @@ const Sidebar = ({ showSidebar }) => {
 };
 
 export default Sidebar;
+

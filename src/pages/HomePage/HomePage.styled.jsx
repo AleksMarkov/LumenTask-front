@@ -13,7 +13,7 @@ export const MainContainer = styled.div`
   overflow: hidden;
 
   @media screen (max-width: 768px) {
-    margin-left: 259px;
+    // margin-left: 260px;
   }
 
   @media screen (max-width: 375px) {

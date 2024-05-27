@@ -11,12 +11,6 @@ const ButtonForColumn = () => {
 
   return (
     <>
-      {/* <AddColumnButton type="button" onClick={toggleModal}>
-      <IconPlus>
-        <use href={`${sprite}#plus`}></use>
-      </IconPlus>
-      Add another column
-    </AddColumnButton> */}
       <ButtonSend type="submit" onClick={toggleModal}>
         <PlusButton>
           <IconWrap>

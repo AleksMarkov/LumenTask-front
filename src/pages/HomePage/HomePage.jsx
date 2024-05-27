@@ -63,7 +63,7 @@ const HomePage = () => {
     <Container>
       <Sidebar showSidebar={showSidebar} />
       <MainContainer>
-        <Header openSidebar={openSidebar} />
+        <Header openSidebar={openSidebar} showSidebar={showSidebar} />
           {boards.length > 0 && !currentBoard._id && (
             <Navigate to={`/home/${boards[0]._id}`} />
           )}
@@ -75,3 +75,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+

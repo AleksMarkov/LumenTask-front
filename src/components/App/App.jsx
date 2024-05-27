@@ -33,7 +33,7 @@ const App = () => {
             <Route path="/welcome" element={<PublicRoute component={<WelcomePage />} />} />
             <Route path="/auth/:id" element={<PublicRoute component={<AuthPage />} />} />
             <Route path="/home" element={<PrivateRoute component={<HomePage />} />}>
-              <Route path=":boardName" element={<PrivateRoute component={<ScreensPage />} />} />
+              <Route path=":boardId" element={<PrivateRoute component={<ScreensPage />} />} />
             </Route>
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
