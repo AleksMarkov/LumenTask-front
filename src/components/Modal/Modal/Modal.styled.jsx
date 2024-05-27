@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Opacity = styled.div`
-  // position: fixed;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,9 +9,13 @@ export const Opacity = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Add opacity for background */
-  z-index: 9999; /* Ensure it's above other content */
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 9999; 
 `;
+
+
+
+
 
 export const Modalcont = styled.div`
   position: fixed;
@@ -25,7 +29,7 @@ export const Modalcont = styled.div`
   padding: 24px;
   color: var(--primary-text-color);
   background: var(--input-bg-color);
-  z-index: 10000; /* Ensure it's above the opacity layer */
+  z-index: 10000; 
   width: ${({ $Width }) => $Width}px;
 `;
 
