@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const WelcomeBg = styled.div`
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;

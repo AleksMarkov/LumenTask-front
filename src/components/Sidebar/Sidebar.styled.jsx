@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const SidebarWrapper = styled.aside`
+ overflow-y: auto;
   position: ${({ showSidebar }) => (showSidebar ? 'static' : 'absolute')};
   display: ${({ showSidebar }) => (showSidebar ? 'flex' : 'none')};
   top: 0;
