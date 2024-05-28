@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch,useSelector } from 'react-redux';
 import { updateUserAvatar, updateUserInfo } from '../../redux/auth/auth-operations';
 import  registerSchema  from '../../schemas/registerSchema';
@@ -29,6 +29,29 @@ const {name, email,password, avatar} = user
   const [visible, setVisible] = useState(false);
   const [preview, setPreview] = useState(null);
   const dispatch = useDispatch();
+  const [modalWidth, setModalWidth] = useState(400); // Default width
+  useEffect(() => {
+    const updateModalWidth = () => {
+      console.log('Current window Width:', window.innerWidth);
+      if (window.innerWidth < 768) {
+        setModalWidth(335); // Change width if Width is 768px or less
+      } else {
+        setModalWidth(400); // Default width
+      }
+    };
+
+    // Initial check
+    updateModalWidth();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', updateModalWidth);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateModalWidth);
+    };
+  }, []);
+
 
   function changeImg(event) {
     const avatarNew = event.target.files[0]
@@ -72,7 +95,7 @@ setValue("avatar", [avatarNew])
 
   return (
     
-    <Modal width={335} height={440} onClose={() => showModal(false)}>
+    <Modal width={modalWidth} height={440} onClose={() => showModal(false)}>
 
       <TitleInfo>Edit profile</TitleInfo>
       <FormUserInfo onSubmit={handleSubmit(submit)}>

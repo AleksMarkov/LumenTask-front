@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Modal from '../Modal/Modal';
 import Icon from 'components/Icon/Icon';
@@ -23,10 +23,30 @@ const CardAddModal = ({ columnId, showModal }) => {
   const [description, setDescription] = useState('');
   const [cardPriority, setCardPriority] = useState('without');
   const [deadline, setDeadline] = useState(new Date());
-
   const board = useSelector(selectCurrentBoard);
-
   const dispatch = useDispatch();
+  const [modalWidth, setModalWidth] = useState(350); // Default width
+  useEffect(() => {
+    const updateModalWidth = () => {
+      console.log('Current window Width:', window.innerWidth);
+      if (window.innerWidth < 768) {
+        setModalWidth(335); // Change width if Width is 768px or less
+      } else {
+        setModalWidth(350); // Default width
+      }
+    };
+
+    // Initial check
+    updateModalWidth();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', updateModalWidth);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateModalWidth);
+    };
+  }, []);
 
   const changeDeadline = date => {
     setDeadline(date);
@@ -51,7 +71,7 @@ const CardAddModal = ({ columnId, showModal }) => {
   };
 
   return (
-    <Modal width={335} height={522} onClose={() => showModal(false)}>
+    <Modal width={modalWidth} height={522} onClose={() => showModal(false)}>
       <Modalform onSubmit={handleSubmit}>
         <ModalTitle>{'Add card'}</ModalTitle>
         <TitleInput

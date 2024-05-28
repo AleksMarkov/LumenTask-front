@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { TOASTER } from '../../../constants/index';
@@ -23,9 +23,30 @@ import {
 const BoardModalEdit = ({ closeModal,currentBoard}) => {
   const [errorMsgShown, setErrorMsgShown] = useState(false);
   const [errorClassName, setErrorClassName] = useState('');
-
   const dispatch = useDispatch();
   const oneBoard = useSelector(selectCurrentBoard);
+  const [modalWidth, setModalWidth] = useState(350); // Default width
+  useEffect(() => {
+    const updateModalWidth = () => {
+      console.log('Current window Width:', window.innerWidth);
+      if (window.innerWidth < 768) {
+        setModalWidth(335); // Change width if Width is 768px or less
+      } else {
+        setModalWidth(350); // Default width
+      }
+    };
+
+    // Initial check
+    updateModalWidth();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', updateModalWidth);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateModalWidth);
+    };
+  }, []);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -49,7 +70,7 @@ const BoardModalEdit = ({ closeModal,currentBoard}) => {
 
 
   return (
-    <Modal width={350} onClose={closeModal}>
+    <Modal width={modalWidth} onClose={closeModal}>
       <Form onSubmit={handleSubmit}>
         <Title>Edit board</Title>
         <Label>

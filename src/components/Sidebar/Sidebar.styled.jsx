@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const SidebarWrapper = styled.aside`
- overflow-y: auto;
+
   position: ${({ showSidebar }) => (showSidebar ? 'static' : 'absolute')};
   display: ${({ showSidebar }) => (showSidebar ? 'flex' : 'none')};
   top: 0;
@@ -10,12 +10,13 @@ export const SidebarWrapper = styled.aside`
   flex-direction: column;
   width: 260px;
   max-width: 260px;
+  min-height: 710px;
   height: 100vh;
   background: var(--accent-bg-color);
   transform: translateX(0px);
   transition: all var(--transition);
   }
-
+    
   @media screen and (max-width: 767px) {
     width: 225px;
    }
@@ -138,9 +139,8 @@ export const PlusIcon = styled.svg`
 
 export const SidebarBoardsList = styled.div`
   overflow-y: auto;
-  overflow-x: hidden;
   margin-bottom: auto;
-
+  min-height: 70px;
   &::-webkit-scrollbar {
     width: 10px;
     height: 5px;

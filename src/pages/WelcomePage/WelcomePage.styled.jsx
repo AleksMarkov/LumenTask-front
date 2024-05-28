@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const WelcomeBg = styled.div`
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +14,9 @@ height: 100vh;
   img {
     margin-bottom: 14px;
   }
-
+  @media screen and (max-height: 500px) {
+    overflow-y: auto;
+  }
   @media screen (min-width: 768px) {
     margin-bottom: 24px;
   }

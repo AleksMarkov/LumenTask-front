@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Modal from '../../Modal/Modal/Modal';
 import { needhelpThunk } from '../../../redux/needhelp/needhelp-operation.js';
 import { toast } from 'react-toastify';
+import { TOASTER } from '../../../constants/index.js';
 import {
   Modalform,
   ModalTitle,
@@ -14,17 +15,29 @@ const NeedHelpModal = ({ showModal }) => {
   const [email, setEmail] = useState('');
   const [comment, setComment] = useState('');
   const dispatch = useDispatch();
+  
+  const [modalWidth, setModalWidth] = useState(400); // Default width
+  useEffect(() => {
+    const updateModalWidth = () => {
+      console.log('Current window Width:', window.innerWidth);
+      if (window.innerWidth < 768) {
+        setModalWidth(335); // Change width if Width is 768px or less
+      } else {
+        setModalWidth(400); // Default width
+      }
+    };
 
-  const TOASTER = {
-    style: {
-      border: '2px solid #bedbb0',
-      backgroundColor: '#1f1f1f',
-      color: '#fff',
-      textAlign: 'center',
-    },
-    position: 'top-center',
-    duration: 2000,
-  };
+    // Initial check
+    updateModalWidth();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', updateModalWidth);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', updateModalWidth);
+    };
+  }, []);
 
   const handleSubmit = async evt => {
     evt.preventDefault();
@@ -56,7 +69,7 @@ const NeedHelpModal = ({ showModal }) => {
 
   return (
     <>
-      <Modal width={400} height={307} onClose={() => showModal(false)}>
+      <Modal width={modalWidth} height={307} onClose={() => showModal(false)}>
         <Modalform onSubmit={handleSubmit}>
           <ModalTitle>{'Need help'}</ModalTitle>
           <Emailinput
