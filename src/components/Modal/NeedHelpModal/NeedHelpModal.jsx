@@ -19,7 +19,6 @@ const NeedHelpModal = ({ showModal }) => {
   const [modalWidth, setModalWidth] = useState(400); // Default width
   useEffect(() => {
     const updateModalWidth = () => {
-      console.log('Current window Width:', window.innerWidth);
       if (window.innerWidth < 768) {
         setModalWidth(335); // Change width if Width is 768px or less
       } else {

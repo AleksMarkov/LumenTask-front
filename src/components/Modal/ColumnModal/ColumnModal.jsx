@@ -23,7 +23,6 @@ const ColumnModal = ({ showModal }) => {
   const [modalWidth, setModalWidth] = useState(350); // Default width
   useEffect(() => {
     const updateModalWidth = () => {
-      console.log('Current window Width:', window.innerWidth);
       if (window.innerWidth < 768) {
         setModalWidth(335); // Change width if Width is 768px or less
       } else {
