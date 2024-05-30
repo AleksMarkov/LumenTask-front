@@ -2,6 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import * as authAPI from '../../api/auth-api.js';
 import * as userAPI from '../../api/user-api.js';
 import { toast } from 'react-toastify';
+import imageCompression from 'browser-image-compression';
 
 export const registerThunk = createAsyncThunk(
   'auth/register',
@@ -79,8 +80,17 @@ export const updateUserAvatar = createAsyncThunk(
   'auth/updateUserAvatar',
   async (file, { rejectWithValue }) => {
     try {
+      const options = {
+        maxSizeMB: 0.1,
+        maxWidthOrHeight: 200,
+        useWebWorker: true,
+      };
+
+      const compressedFile = await imageCompression(file, options);
+      
       const formData = new FormData();
-    formData.append('avatar', file);
+      formData.append('avatar', compressedFile);
+
       const data = await userAPI.updateUserAvatar(formData);
       return data;
     } catch (error) {

@@ -25,7 +25,7 @@ import { selectUser } from '../../redux/auth/auth-selectors';
 
 const UserInfo = ({showModal}) => {
   const user = useSelector(selectUser)
-const {name, email,password, avatar} = user
+const {name, email, password, avatar} = user
   const [visible, setVisible] = useState(false);
   const [preview, setPreview] = useState(null);
   const dispatch = useDispatch();
