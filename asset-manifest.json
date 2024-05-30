@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/LumenTask-front/static/css/main.26803190.css",
-    "main.js": "/LumenTask-front/static/js/main.a0f18eb6.js",
+    "main.js": "/LumenTask-front/static/js/main.7aef6eac.js",
     "static/js/665.a4dd16c3.chunk.js": "/LumenTask-front/static/js/665.a4dd16c3.chunk.js",
-    "static/js/688.6fa94c29.chunk.js": "/LumenTask-front/static/js/688.6fa94c29.chunk.js",
-    "static/js/205.9b25270e.chunk.js": "/LumenTask-front/static/js/205.9b25270e.chunk.js",
+    "static/js/688.14edf435.chunk.js": "/LumenTask-front/static/js/688.14edf435.chunk.js",
+    "static/js/205.c47ed2ca.chunk.js": "/LumenTask-front/static/js/205.c47ed2ca.chunk.js",
     "static/js/249.20fa7083.chunk.js": "/LumenTask-front/static/js/249.20fa7083.chunk.js",
     "static/js/657.7af63ec5.chunk.js": "/LumenTask-front/static/js/657.7af63ec5.chunk.js",
     "static/js/525.1b244488.chunk.js": "/LumenTask-front/static/js/525.1b244488.chunk.js",
@@ -123,10 +123,10 @@
     "static/media/icons-sprite.svg": "/LumenTask-front/static/media/icons-sprite.f7bad1557d5f1ff811b95faf64f78ba8.svg",
     "index.html": "/LumenTask-front/index.html",
     "main.26803190.css.map": "/LumenTask-front/static/css/main.26803190.css.map",
-    "main.a0f18eb6.js.map": "/LumenTask-front/static/js/main.a0f18eb6.js.map",
+    "main.7aef6eac.js.map": "/LumenTask-front/static/js/main.7aef6eac.js.map",
     "665.a4dd16c3.chunk.js.map": "/LumenTask-front/static/js/665.a4dd16c3.chunk.js.map",
-    "688.6fa94c29.chunk.js.map": "/LumenTask-front/static/js/688.6fa94c29.chunk.js.map",
-    "205.9b25270e.chunk.js.map": "/LumenTask-front/static/js/205.9b25270e.chunk.js.map",
+    "688.14edf435.chunk.js.map": "/LumenTask-front/static/js/688.14edf435.chunk.js.map",
+    "205.c47ed2ca.chunk.js.map": "/LumenTask-front/static/js/205.c47ed2ca.chunk.js.map",
     "249.20fa7083.chunk.js.map": "/LumenTask-front/static/js/249.20fa7083.chunk.js.map",
     "657.7af63ec5.chunk.js.map": "/LumenTask-front/static/js/657.7af63ec5.chunk.js.map",
     "525.1b244488.chunk.js.map": "/LumenTask-front/static/js/525.1b244488.chunk.js.map",
@@ -136,6 +136,6 @@
   },
   "entrypoints": [
     "static/css/main.26803190.css",
-    "static/js/main.a0f18eb6.js"
+    "static/js/main.7aef6eac.js"
   ]
 }
