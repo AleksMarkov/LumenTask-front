@@ -1,6 +1,6 @@
 # LumenTask Frontend
 
-This project is the frontend for the Task Pro application, a task management
+This project is the frontend for the LumenTask application, a task management
 tool designed to streamline project workflows and enhance productivity. The
 frontend is built using modern web technologies to provide a smooth and
 efficient user experience.
