@@ -1,112 +1,117 @@
-# React homework template
+# LumenTask Frontend
 
-Цей проект був створений за допомогою
-[Create React App](https://github.com/facebook/create-react-app). Для знайомства
-і налаштування додаткових можливостей
-[звернися до документації](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is the frontend for the Task Pro application, a task management
+tool designed to streamline project workflows and enhance productivity. The
+frontend is built using modern web technologies to provide a smooth and
+efficient user experience.
 
-## Створення репозиторію за шаблоном
+## Project Overview
 
-Використовуй цей репозиторій організації GoIT як шаблон для створення репозиторію
-свого проєкта. Для цього натисни на кнопку `«Use this template»` і вибери опцію
-`«Create a new repository»`, як показано на зображенні.
+The LumenTask Frontend is developed with React, offering a robust and dynamic
+interface for users to manage their tasks. The application includes several key
+features:
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+- Task creation and management
+- Real-time updates
+- User authentication
+- Responsive design
 
-На наступному кроці відкриється сторінка створення нового репозиторію. Заповни поле
-його імені, переконайся що репозиторій публічний, після чого натисни кнопку
-`«Create repository from template»`.
+## Features
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+### Task Management
 
-Після того як репозиторій буде створено, необхідно перейти в налаштування
-створеного репозиторію на вкладку `Settings` > `Actions` > `General` як
-показано на зображенні.
+Users can create, edit, and delete tasks. Each task can be assigned to a
+specific project and includes the following fields:
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+- **Title**
+- **Description**
+- **Due Date**
+- **Priority**
+- **Status**
 
-Проскроливши сторінку до самого кінця, у секції `«Workflow permissions»` вибери
-опцію `«Read and write permissions»` і постав галочку в чекбоксі. Це
-необхідно для автоматизації процесу деплою проєкту.
+### Real-Time Updates
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+The application uses WebSockets to provide real-time updates to the task list,
+ensuring that users always have the most up-to-date information.
 
-Тепер у тебе є особистий репозиторій проекту, зі структурою файлів і папок
-репозиторію-шаблону. Далі працюй із ним як із будь-яким іншим особистим репозиторієм,
-клонуй його собі на комп'ютер, пиши код, роби комміти і відправляй їх на
-GitHub.
+### User Authentication
 
-## Підготовка до роботи
+User authentication is handled through JWT tokens, ensuring secure access to the
+application. Users can register, log in, and manage their sessions securely.
 
-1. Переконайся що на комп'ютері встановлено LTS-версія Node.js.
-   [Завантаж і встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Встанови базові залежності проєкту командою `npm install`.
-3. Запусти режим розробки, виконавши команду `npm start`.
-4. Перейди в браузері за адресою [http://localhost:3000](http://localhost:3000).
-   Ця сторінка буде автоматично перезавантажуватися після збереження змін у файлах проєкту.
+### Responsive Design
 
-## Деплой
+The application is fully responsive, providing an optimal experience on both
+desktop and mobile devices.
 
-Продакшн версія проєкту буде автоматично проходити лінтинг, збиратися і
-деплоїтися на GitHub Pages, у гілку `gh-pages`, щоразу, коли оновлюється
-гілка `main`. Наприклад, після прямого пушу або прийнятого пул-реквесту. Для цього
-необхідно у файлі `package.json` відредагувати поле `homepage`, замінивши
-`your_username` і `your_repo_name` на свої, і відправити зміни на GitHub.
+## Technical Details
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
+### Project Structure
 
-Далі необхідно зайти в налаштування GitHub-репозиторію (`Settings` > `Pages`) і
-виставити роздачу продакшн-версії файлів із папки `/root` гілки `gh-pages`, якщо
-це не було зроблено автоматично.
+The project follows a modular structure to keep the codebase organized and
+maintainable. Key directories include:
 
-![GitHub Pages settings](./assets/repo-settings.png)
+- `src/components`: Reusable UI components
+- `src/pages`: Application pages
+- `src/services`: API service modules
+- `src/store`: Redux store configuration
 
-### Статус деплоя
+### Routing
 
-Статус деплою крайнього коміту відображається іконкою біля його ідентифікатора.
+React Router is used for managing navigation within the application. Key routes
+include:
 
-- **Жовтий колір** - виконується збірка і деплой проєкту.
-- **Зелений колір** - деплой завершився успішно.
-- **Червоний колір** - під час лінтингу, сборки або деплою сталася помилка.
+- `/login`: User login page
+- `/register`: User registration page
+- `/tasks`: Task management dashboard
+- `/tasks/:id`: Task details page
 
-Детальнішу інформацію про статус можна подивитися, клікнувши на іконку, і
-у вікні, що випадає, перейти за посиланням `Details`.
+### State Management
 
-![Deployment status](./assets/deploy-status.png)
+Redux is used for state management, ensuring a consistent and predictable state
+across the application. Key features include:
 
-### Жива сторінка
+- **Task List**: Centralized task data
+- **User Authentication**: Managed through Redux state
 
-Через якийсь час, зазвичай кілька хвилин, живу сторінку можна буде подивитися
-за адресою, вказаною у відредагованій властивості `homepage`. Наприклад, ось
-посилання на живу версію для цього репозиторію
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+## Getting Started
 
-Якщо відкривається порожня сторінка, переконайся, що у вкладці `Console` немає помилок
-пов'язаних із неправильними шляхами до CSS і JS файлів проєкту (**404**). Швидше 
-за все у тебе неправильне значення властивості `homepage` у файлі `package.json`.
+### Prerequisites
 
-### Маршрутизація
+- **Node.js** (LTS version recommended)
+- **npm** or **yarn**
 
-Якщо додаток використовує бібліотеку `react-router-dom` для маршрутизації,
-необхідно додатково налаштувати компонент `<BrowserRouter>`, передавши у пропе
-`basename` точну назву твого репозиторію. Слеш на початку рядка обов'язковий.
+### Installation
 
-```jsx
-<BrowserRouter basename="/your_repo_name">
-  <App />
-</BrowserRouter>
-```
+Clone the repository and install dependencies:
 
-## Як це працює
+git clone https://github.com/AleksMarkov/LumenTask-front.git cd LumenTask-front
+npm install
 
-![How it works](./assets/how-it-works.png)
+### Running the Application
 
-1. Після кожного пушу в гілку `main` GitHub-репозиторія, запускається спеціальний
-   скрипт (GitHub Action) з файла `.github/workflows/deploy.yml`.
-2. Усі файли репозиторію копіюються на сервер, де проект ініціалізується і
-   проходить лінтинг і збірку перед деплоєм.
-3. Якщо всі кроки пройшли успішно, зібрана продакшн-версія файлів проєкту
-   відправляється в гілку `gh-pages`. В іншому випадку, в лозі виконання
-   скрипта буде вказано в чому проблема.
+Start the development server:
+
+npm start
+
+Visit `http://localhost:3000` in your browser to view the application.
+
+### Building for Production
+
+To build the application for production, run:
+
+npm run build
+
+The production-ready files will be in the `build` directory.
+
+## Contributing
+
+Contributions are welcome! Please submit a pull request or open an issue to
+discuss any changes.
+
+## License
+
+This project is licensed under the MIT License.
+
+Contributions are welcome! Please submit a pull request or open an issue to
+discuss any changes.
